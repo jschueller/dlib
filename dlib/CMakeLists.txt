@@ -864,6 +864,9 @@ if (NOT TARGET dlib)
    endif ()  ##### end of if NOT DLIB_ISO_CPP_ONLY ##########################################################
 
 
+   message(STATUS "dlib_needed_public_includes=${dlib_needed_public_includes}")
+   message(STATUS "dlib_needed_private_includes=${dlib_needed_private_includes}")
+
    target_include_directories(dlib
       INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>
       INTERFACE $<INSTALL_INTERFACE:include>
